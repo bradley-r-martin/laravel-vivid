@@ -1,0 +1,27 @@
+{
+  "name": "bradley-r-martin/laravel-vivid",
+  "description": "Laravel Package to help with rapid API Development.",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Brad Martin",
+      "email": "bradley.r.martin@me.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "spatie/laravel-query-builder": "^2.3"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "BRM\\Vivid\\FrameworkServiceProvider"
+      ]
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "BRM\\Vivid\\": "./"
+    }
+  }
+}
