@@ -8,7 +8,7 @@
       "email": "bradley.r.martin@me.com"
     }
   ],
-  "minimum-stability": "dev",
+  "version": "1.0.0",
   "require": {
     "spatie/laravel-query-builder": "^2.3"
   },
