@@ -293,6 +293,10 @@ trait Vivid
 
     public function callback($when)
     {
+      if (isset($this->record)) {
+        event('vivid.'.$this->table.'.'.$when, $this->record);
+      }
+    
         if (isset($this->hooks[$when])) {
             return $this->hooks[$when]();
         }
