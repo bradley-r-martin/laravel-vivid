@@ -29,13 +29,14 @@ trait Vivid
         $validator = Validator::make($this->data, $this->merge_validation());
         if ($validator->fails()) {
             return [
-        'status'=>'failed',
-        'data'=>[
-          'errors'=> $validator->errors()->all()
-        ]
-      ];
+            'status'=>'failed',
+            'data'=>[
+              'errors'=> $validator->errors()->all()
+            ]
+          ];
         }
         $this->callback('afterValidation');
+        $this->validation = [];
         return false;
     }
     public function query_builder()
